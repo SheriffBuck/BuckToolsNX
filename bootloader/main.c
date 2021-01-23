@@ -354,16 +354,34 @@ void buckCPUBuckToggle()
 	}
 	else
 	{
-		// Fix CPU/GPU after a L4T warmboot.
-		i2c_send_byte(I2C_5, MAX77620_I2C_ADDR, MAX77620_REG_GPIO5, 2);
-		i2c_send_byte(I2C_5, MAX77620_I2C_ADDR, MAX77620_REG_GPIO6, 2);
-
-		i2c_send_byte(I2C_5, MAX77621_CPU_I2C_ADDR, MAX77621_VOUT_REG, MAX77621_VOUT_0_95V); // Disable power.
-
+		_ccplex_enable_power_t210();
 		EPRINTF("Disabled CPU buck!");
 	}
 
 	buckCPUToggleOn = !buckCPUToggleOn;
+	EPRINTF("Press button to return.");
+	btn_wait();
+}
+
+static bool buckGPUToggleOn;
+
+void buckGPUBuckToggle()
+{
+	gfx_clear_grey(0x1B);
+	gfx_con_setpos(0, 0);
+
+	if (!buckGPUToggleOn)
+	{
+		_ccplex_enable_power_t210_GPU();
+		EPRINTF("Enabled GPU buck!");
+	}
+	else
+	{
+		_ccplex_disable_power_t210_GPU();
+		EPRINTF("Disabled GPU buck!");
+	}
+
+	buckGPUToggleOn = !buckGPUToggleOn;
 	EPRINTF("Press button to return.");
 	btn_wait();
 }
@@ -1565,10 +1583,12 @@ power_state_t STATE_REBOOT_BYPASS_FUSES = REBOOT_BYPASS_FUSES;
 
 ment_t ment_top[] = {
 	MDEF_HANDLER("Toggle Fan", buckFanToggle),
-	MDEF_HANDLER("Toggle CPU Buck", buckCPUBuckToggle),
+	MDEF_HANDLER("Toggle MAX77621 CPU Buck", buckCPUBuckToggle),
+	MDEF_HANDLER("Toggle MAX77621 GPU Buck [Not working]", buckGPUBuckToggle),
 	MDEF_CAPTION("---------------", 0xFF444444),
 	MDEF_MENU("Tools",        &menu_tools),
 	MDEF_MENU("Console info", &menu_cinfo),
+	MDEF_MENU("Options", &menu_options),
 	MDEF_CAPTION("---------------", 0xFF444444),
 	MDEF_HANDLER("Reload", ipl_reload),
 	MDEF_HANDLER_EX("Reboot (OFW)", &STATE_REBOOT_BYPASS_FUSES, power_set_state_ex),

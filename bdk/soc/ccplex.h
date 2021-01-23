@@ -19,6 +19,9 @@
 
 #include <utils/types.h>
 
+void _ccplex_enable_power_t210_GPU();
+void _ccplex_disable_power_t210_GPU();
+void _ccplex_disable_power_t210();
 void _ccplex_enable_power_t210();
 void ccplex_boot_cpu0(u32 entry);
 

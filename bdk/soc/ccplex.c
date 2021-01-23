@@ -26,6 +26,40 @@
 #include <power/max77812.h>
 #include <utils/util.h>
 
+void _ccplex_enable_power_t210_GPU()
+{
+	// Configure GPIO5 and enable output in order to power CPU pmic.
+	max77620_config_gpio(5, MAX77620_GPIO_OUTPUT_ENABLE);
+
+	// Configure CPU pmic.
+	// 1-3.x: MAX77621_NFSR_ENABLE.
+	// 1.0.0-3.x: MAX77621_T_JUNCTION_120 | MAX77621_CKKADV_TRIP_DISABLE | MAX77621_INDUCTOR_NOMINAL.
+	max77621_config_default(REGULATOR_GPU0, MAX77621_CTRL_HOS_CFG);
+
+	// Set voltage and enable cores power.
+	max7762x_regulator_set_voltage(REGULATOR_GPU0, 950000);
+	max7762x_regulator_enable(REGULATOR_GPU0, true);
+}
+
+void _ccplex_disable_power_t210_GPU()
+{
+	// Fix CPU/GPU after a L4T warmboot.
+	i2c_send_byte(I2C_5, MAX77620_I2C_ADDR, MAX77620_REG_GPIO5, 2);
+	i2c_send_byte(I2C_5, MAX77620_I2C_ADDR, MAX77620_REG_GPIO6, 2);
+
+	i2c_send_byte(I2C_5, MAX77621_GPU_I2C_ADDR, MAX77621_VOUT_REG, MAX77621_VOUT_0_95V); // Disable power.
+}
+
+void _ccplex_disable_power_t210()
+{
+	// Fix CPU/GPU after a L4T warmboot.
+	i2c_send_byte(I2C_5, MAX77620_I2C_ADDR, MAX77620_REG_GPIO5, 2);
+	i2c_send_byte(I2C_5, MAX77620_I2C_ADDR, MAX77620_REG_GPIO6, 2);
+
+	i2c_send_byte(I2C_5, MAX77621_CPU_I2C_ADDR, MAX77621_VOUT_REG, MAX77621_VOUT_0_95V); // Disable power.
+}
+
+
 void _ccplex_enable_power_t210()
 {
 	// Configure GPIO5 and enable output in order to power CPU pmic.
