@@ -1,0 +1,1178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="bdk\display\di.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\ianos\ianos.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\ianos\elfload\elfload.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\ianos\elfload\elfreloc_aarch64.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\ianos\elfload\elfreloc_arm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\input\als.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\input\joycon.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\input\touch.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\compr\blz.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\compr\lz.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\compr\lz4.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\fatfs\ff.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\fatfs\ffunicode.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_core\lv_group.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_core\lv_indev.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_core\lv_lang.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_core\lv_obj.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_core\lv_refr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_core\lv_style.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_core\lv_vdb.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_draw\lv_draw.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_draw\lv_draw_arc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_draw\lv_draw_img.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_draw\lv_draw_label.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_draw\lv_draw_line.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_draw\lv_draw_rbasic.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_draw\lv_draw_rect.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_draw\lv_draw_triangle.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_draw\lv_draw_vbasic.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_fonts\hekate_symbol_120.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_fonts\hekate_symbol_20.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_fonts\hekate_symbol_30.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_fonts\interui_20.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_fonts\interui_30.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_fonts\lv_font_builtin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_fonts\ubuntu_mono.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_hal\lv_hal_disp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_hal\lv_hal_indev.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_hal\lv_hal_tick.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_misc\lv_anim.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_misc\lv_area.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_misc\lv_circ.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_misc\lv_color.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_misc\lv_font.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_misc\lv_fs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_misc\lv_gc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_misc\lv_ll.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_misc\lv_log.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_misc\lv_math.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_misc\lv_mem.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_misc\lv_task.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_misc\lv_templ.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_misc\lv_txt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_misc\lv_ufs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_arc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_bar.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_btn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_btnm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_calendar.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_canvas.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_cb.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_chart.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_cont.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_ddlist.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_gauge.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_img.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_imgbtn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_kb.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_label.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_led.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_line.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_list.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_lmeter.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_mbox.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_objx_templ.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_page.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_preload.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_roller.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_slider.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_spinbox.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_sw.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_ta.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_table.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_tabview.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_tileview.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_win.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_themes\lv_theme.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\libs\lvgl\lv_themes\lv_theme_hekate.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\mem\heap.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\mem\mc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\mem\minerva.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\mem\sdram.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\mem\sdram_lp0.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\mem\smmu.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\power\bm92t36.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\power\bq24193.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\power\max17050.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\power\max7762x.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\power\regulator_5v.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\rtc\max77620-rtc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\sec\se.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\sec\tsec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\soc\bpmp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\soc\ccplex.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\soc\clock.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\soc\fuse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\soc\gpio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\soc\hw_init.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\soc\i2c.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\soc\irq.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\soc\kfuse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\soc\pinmux.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\soc\pmc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\soc\uart.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\storage\ramdisk.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\storage\sdmmc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\storage\sdmmc_driver.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\thermal\fan.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\thermal\tmp451.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\usb\usbd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\usb\usb_descriptors.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\usb\usb_gadget_hid.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\usb\usb_gadget_ums.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\usb\xusbd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\utils\btn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\utils\dirlist.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\utils\ini.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\utils\sprintf.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bdk\utils\util.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bootloader\config.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bootloader\main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bootloader\frontend\fe_emmc_tools.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bootloader\frontend\fe_info.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bootloader\frontend\fe_tools.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bootloader\gfx\gfx.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bootloader\gfx\tui.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bootloader\hos\fss.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bootloader\hos\hos.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bootloader\hos\hos_config.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bootloader\hos\pkg1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bootloader\hos\pkg2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bootloader\hos\pkg2_ini_kippatch.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bootloader\hos\secmon_exo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bootloader\hos\sept.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bootloader\libs\fatfs\diskio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bootloader\libs\fatfs\ffsystem.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bootloader\storage\emummc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bootloader\storage\nx_emmc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bootloader\storage\nx_sd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="loader\loader.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="modules\hekate_libsys_lp0\sys_sdramlp0.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="modules\hekate_libsys_minerva\sys_sdrammtc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="modules\simple_sample\module_sample.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="modules\simple_sample\gfx\gfx.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nyx\nyx_gui\config.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nyx\nyx_gui\nyx.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nyx\nyx_gui\frontend\fe_emmc_tools.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nyx\nyx_gui\frontend\fe_emummc_tools.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nyx\nyx_gui\frontend\gui.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nyx\nyx_gui\frontend\gui_emmc_tools.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nyx\nyx_gui\frontend\gui_emummc_tools.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nyx\nyx_gui\frontend\gui_info.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nyx\nyx_gui\frontend\gui_options.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nyx\nyx_gui\frontend\gui_tools.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nyx\nyx_gui\frontend\gui_tools_partition_manager.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nyx\nyx_gui\gfx\gfx.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nyx\nyx_gui\hos\hos.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nyx\nyx_gui\hos\pkg1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nyx\nyx_gui\hos\pkg2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nyx\nyx_gui\hos\sept.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nyx\nyx_gui\libs\fatfs\diskio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nyx\nyx_gui\libs\fatfs\ffsystem.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nyx\nyx_gui\storage\nx_emmc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nyx\nyx_gui\storage\nx_emmc_bis.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nyx\nyx_gui\storage\nx_sd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tools\bin2c\bin2c.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tools\lz\lz.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tools\lz\lz77.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="tools\emc.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="tools\mc.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Versions.inc">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="bdk\display\di.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="bdk\mem\sdram_config.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="bdk\mem\sdram_config_lz.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="bdk\mem\sdram_config_t210b01.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="output\nyx.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="bdk\fatfs_cfg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\gfx_utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\memory_map.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\module.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\display\di.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\ianos\ianos.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\ianos\elfload\elf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\ianos\elfload\elfarch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\ianos\elfload\elfload.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\input\als.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\input\joycon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\input\touch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lv_conf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\compr\blz.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\compr\lz.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\compr\lz4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\fatfs\diskio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\fatfs\ff.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lvgl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_core\lv_group.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_core\lv_indev.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_core\lv_lang.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_core\lv_obj.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_core\lv_refr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_core\lv_style.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_core\lv_vdb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_draw\lv_draw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_draw\lv_draw_arc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_draw\lv_draw_img.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_draw\lv_draw_label.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_draw\lv_draw_line.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_draw\lv_draw_rbasic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_draw\lv_draw_rect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_draw\lv_draw_triangle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_draw\lv_draw_vbasic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_fonts\lv_font_builtin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_hal\lv_hal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_hal\lv_hal_disp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_hal\lv_hal_indev.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_hal\lv_hal_tick.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_misc\lv_anim.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_misc\lv_area.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_misc\lv_circ.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_misc\lv_color.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_misc\lv_font.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_misc\lv_fs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_misc\lv_gc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_misc\lv_ll.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_misc\lv_log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_misc\lv_math.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_misc\lv_mem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_misc\lv_symbol_def.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_misc\lv_task.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_misc\lv_templ.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_misc\lv_txt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_misc\lv_ufs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_arc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_bar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_btn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_btnm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_calendar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_canvas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_cb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_chart.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_cont.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_ddlist.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_gauge.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_img.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_imgbtn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_kb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_label.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_led.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_line.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_list.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_lmeter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_mbox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_objx_templ.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_page.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_preload.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_roller.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_slider.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_spinbox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_sw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_ta.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_table.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_tabview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_tileview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_win.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_themes\lv_theme.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\libs\lvgl\lv_themes\lv_theme_hekate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\mem\emc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\mem\heap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\mem\mc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\mem\mc_t210.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\mem\minerva.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\mem\mtc_table.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\mem\sdram.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\mem\sdram_lp0_param_t210.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\mem\sdram_lp0_param_t210b01.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\mem\sdram_param_t210.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\mem\sdram_param_t210b01.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\mem\smmu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\power\bm92t36.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\power\bq24193.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\power\max17050.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\power\max77620.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\power\max7762x.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\power\max77812.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\power\regulator_5v.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\rtc\max77620-rtc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\sec\se.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\sec\se_t210.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\sec\tsec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\sec\tsec_t210.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\soc\bpmp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\soc\ccplex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\soc\clock.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\soc\fuse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\soc\gpio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\soc\hw_init.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\soc\i2c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\soc\irq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\soc\kfuse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\soc\pinmux.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\soc\pmc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\soc\pmc_lp0_t210.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\soc\t210.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\soc\uart.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\storage\mbr_gpt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\storage\mmc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\storage\nx_sd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\storage\ramdisk.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\storage\sd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\storage\sdmmc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\storage\sdmmc_driver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\storage\sdmmc_t210.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\thermal\fan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\thermal\tmp451.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\usb\usbd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\usb\usb_descriptor_types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\usb\usb_t210.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\utils\aarch64_util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\utils\btn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\utils\dirlist.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\utils\ini.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\utils\list.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\utils\sprintf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\utils\types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bdk\utils\util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bootloader\config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bootloader\frontend\fe_emmc_tools.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bootloader\frontend\fe_info.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bootloader\frontend\fe_tools.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bootloader\gfx\gfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bootloader\gfx\logos.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bootloader\gfx\tui.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bootloader\hos\fss.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bootloader\hos\hos.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bootloader\hos\hos_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bootloader\hos\pkg1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bootloader\hos\pkg2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bootloader\hos\pkg2_ini_kippatch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bootloader\hos\secmon_exo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bootloader\hos\sept.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bootloader\libs\fatfs\ffconf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bootloader\storage\emummc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bootloader\storage\nx_emmc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="modules\hekate_libsys_lp0\pmc_lp0_t210.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="modules\hekate_libsys_lp0\sdram_lp0_param_t210.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="modules\hekate_libsys_lp0\sdram_lp0_param_t210b01.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="modules\hekate_libsys_lp0\t210.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="modules\hekate_libsys_lp0\types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="modules\hekate_libsys_minerva\mtc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="modules\hekate_libsys_minerva\mtc_mc_emc_regs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="modules\hekate_libsys_minerva\mtc_switch_tables.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="modules\hekate_libsys_minerva\mtc_table.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="modules\hekate_libsys_minerva\types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="modules\simple_sample\gfx\gfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nyx\nyx_gui\config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nyx\nyx_gui\frontend\fe_emmc_tools.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nyx\nyx_gui\frontend\fe_emummc_tools.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nyx\nyx_gui\frontend\gui.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nyx\nyx_gui\frontend\gui_emmc_tools.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nyx\nyx_gui\frontend\gui_emummc_tools.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nyx\nyx_gui\frontend\gui_info.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nyx\nyx_gui\frontend\gui_options.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nyx\nyx_gui\frontend\gui_tools.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nyx\nyx_gui\frontend\gui_tools_partition_manager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nyx\nyx_gui\gfx\gfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nyx\nyx_gui\gfx\logos-gui.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nyx\nyx_gui\hos\hos.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nyx\nyx_gui\hos\pkg1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nyx\nyx_gui\hos\pkg2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nyx\nyx_gui\hos\sept.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nyx\nyx_gui\libs\fatfs\ffconf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nyx\nyx_gui\storage\nx_emmc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nyx\nyx_gui\storage\nx_emmc_bis.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tools\lz\lz.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

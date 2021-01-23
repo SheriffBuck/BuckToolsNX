@@ -12,7 +12,7 @@ include ./Versions.inc
 
 ################################################################################
 
-TARGET := hekate
+TARGET := BuckToolsNX
 BUILDDIR := build
 OUTPUTDIR := output
 SOURCEDIR = bootloader

@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{27B50072-8B74-4D07-AA26-4E48151DE1DF}</ProjectGuid>
+    <Keyword>MakeFileProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <IncludePath>C:\Users\richa\Source\repos\BuckToolsNX\bootloader;C:\Users\richa\Source\repos\BuckToolsNX\bdk;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="bdk\display\di.c" />
+    <ClCompile Include="bdk\ianos\elfload\elfload.c" />
+    <ClCompile Include="bdk\ianos\elfload\elfreloc_aarch64.c" />
+    <ClCompile Include="bdk\ianos\elfload\elfreloc_arm.c" />
+    <ClCompile Include="bdk\ianos\ianos.c" />
+    <ClCompile Include="bdk\input\als.c" />
+    <ClCompile Include="bdk\input\joycon.c" />
+    <ClCompile Include="bdk\input\touch.c" />
+    <ClCompile Include="bdk\libs\compr\blz.c" />
+    <ClCompile Include="bdk\libs\compr\lz.c" />
+    <ClCompile Include="bdk\libs\compr\lz4.c" />
+    <ClCompile Include="bdk\libs\fatfs\ff.c" />
+    <ClCompile Include="bdk\libs\fatfs\ffunicode.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_core\lv_group.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_core\lv_indev.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_core\lv_lang.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_core\lv_obj.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_core\lv_refr.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_core\lv_style.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_core\lv_vdb.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_draw\lv_draw.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_draw\lv_draw_arc.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_draw\lv_draw_img.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_draw\lv_draw_label.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_draw\lv_draw_line.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_draw\lv_draw_rbasic.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_draw\lv_draw_rect.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_draw\lv_draw_triangle.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_draw\lv_draw_vbasic.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_fonts\hekate_symbol_120.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_fonts\hekate_symbol_20.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_fonts\hekate_symbol_30.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_fonts\interui_20.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_fonts\interui_30.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_fonts\lv_font_builtin.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_fonts\ubuntu_mono.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_hal\lv_hal_disp.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_hal\lv_hal_indev.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_hal\lv_hal_tick.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_misc\lv_anim.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_misc\lv_area.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_misc\lv_circ.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_misc\lv_color.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_misc\lv_font.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_misc\lv_fs.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_misc\lv_gc.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_misc\lv_ll.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_misc\lv_log.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_misc\lv_math.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_misc\lv_mem.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_misc\lv_task.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_misc\lv_templ.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_misc\lv_txt.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_misc\lv_ufs.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_arc.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_bar.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_btn.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_btnm.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_calendar.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_canvas.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_cb.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_chart.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_cont.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_ddlist.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_gauge.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_img.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_imgbtn.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_kb.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_label.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_led.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_line.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_list.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_lmeter.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_mbox.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_objx_templ.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_page.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_preload.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_roller.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_slider.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_spinbox.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_sw.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_ta.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_table.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_tabview.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_tileview.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_objx\lv_win.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_themes\lv_theme.c" />
+    <ClCompile Include="bdk\libs\lvgl\lv_themes\lv_theme_hekate.c" />
+    <ClCompile Include="bdk\mem\heap.c" />
+    <ClCompile Include="bdk\mem\mc.c" />
+    <ClCompile Include="bdk\mem\minerva.c" />
+    <ClCompile Include="bdk\mem\sdram.c" />
+    <ClCompile Include="bdk\mem\sdram_lp0.c" />
+    <ClCompile Include="bdk\mem\smmu.c" />
+    <ClCompile Include="bdk\power\bm92t36.c" />
+    <ClCompile Include="bdk\power\bq24193.c" />
+    <ClCompile Include="bdk\power\max17050.c" />
+    <ClCompile Include="bdk\power\max7762x.c" />
+    <ClCompile Include="bdk\power\regulator_5v.c" />
+    <ClCompile Include="bdk\rtc\max77620-rtc.c" />
+    <ClCompile Include="bdk\sec\se.c" />
+    <ClCompile Include="bdk\sec\tsec.c" />
+    <ClCompile Include="bdk\soc\bpmp.c" />
+    <ClCompile Include="bdk\soc\ccplex.c" />
+    <ClCompile Include="bdk\soc\clock.c" />
+    <ClCompile Include="bdk\soc\fuse.c" />
+    <ClCompile Include="bdk\soc\gpio.c" />
+    <ClCompile Include="bdk\soc\hw_init.c" />
+    <ClCompile Include="bdk\soc\i2c.c" />
+    <ClCompile Include="bdk\soc\irq.c" />
+    <ClCompile Include="bdk\soc\kfuse.c" />
+    <ClCompile Include="bdk\soc\pinmux.c" />
+    <ClCompile Include="bdk\soc\pmc.c" />
+    <ClCompile Include="bdk\soc\uart.c" />
+    <ClCompile Include="bdk\storage\ramdisk.c" />
+    <ClCompile Include="bdk\storage\sdmmc.c" />
+    <ClCompile Include="bdk\storage\sdmmc_driver.c" />
+    <ClCompile Include="bdk\thermal\fan.c" />
+    <ClCompile Include="bdk\thermal\tmp451.c" />
+    <ClCompile Include="bdk\usb\usbd.c" />
+    <ClCompile Include="bdk\usb\usb_descriptors.c" />
+    <ClCompile Include="bdk\usb\usb_gadget_hid.c" />
+    <ClCompile Include="bdk\usb\usb_gadget_ums.c" />
+    <ClCompile Include="bdk\usb\xusbd.c" />
+    <ClCompile Include="bdk\utils\btn.c" />
+    <ClCompile Include="bdk\utils\dirlist.c" />
+    <ClCompile Include="bdk\utils\ini.c" />
+    <ClCompile Include="bdk\utils\sprintf.c" />
+    <ClCompile Include="bdk\utils\util.c" />
+    <ClCompile Include="bootloader\config.c" />
+    <ClCompile Include="bootloader\frontend\fe_emmc_tools.c" />
+    <ClCompile Include="bootloader\frontend\fe_info.c" />
+    <ClCompile Include="bootloader\frontend\fe_tools.c" />
+    <ClCompile Include="bootloader\gfx\gfx.c" />
+    <ClCompile Include="bootloader\gfx\tui.c" />
+    <ClCompile Include="bootloader\hos\fss.c" />
+    <ClCompile Include="bootloader\hos\hos.c" />
+    <ClCompile Include="bootloader\hos\hos_config.c" />
+    <ClCompile Include="bootloader\hos\pkg1.c" />
+    <ClCompile Include="bootloader\hos\pkg2.c" />
+    <ClCompile Include="bootloader\hos\pkg2_ini_kippatch.c" />
+    <ClCompile Include="bootloader\hos\secmon_exo.c" />
+    <ClCompile Include="bootloader\hos\sept.c" />
+    <ClCompile Include="bootloader\libs\fatfs\diskio.c" />
+    <ClCompile Include="bootloader\libs\fatfs\ffsystem.c" />
+    <ClCompile Include="bootloader\main.c" />
+    <ClCompile Include="bootloader\storage\emummc.c" />
+    <ClCompile Include="bootloader\storage\nx_emmc.c" />
+    <ClCompile Include="bootloader\storage\nx_sd.c" />
+    <ClCompile Include="loader\loader.c" />
+    <ClCompile Include="modules\hekate_libsys_lp0\sys_sdramlp0.c" />
+    <ClCompile Include="modules\hekate_libsys_minerva\sys_sdrammtc.c" />
+    <ClCompile Include="modules\simple_sample\gfx\gfx.c" />
+    <ClCompile Include="modules\simple_sample\module_sample.c" />
+    <ClCompile Include="nyx\nyx_gui\config.c" />
+    <ClCompile Include="nyx\nyx_gui\frontend\fe_emmc_tools.c" />
+    <ClCompile Include="nyx\nyx_gui\frontend\fe_emummc_tools.c" />
+    <ClCompile Include="nyx\nyx_gui\frontend\gui.c" />
+    <ClCompile Include="nyx\nyx_gui\frontend\gui_emmc_tools.c" />
+    <ClCompile Include="nyx\nyx_gui\frontend\gui_emummc_tools.c" />
+    <ClCompile Include="nyx\nyx_gui\frontend\gui_info.c" />
+    <ClCompile Include="nyx\nyx_gui\frontend\gui_options.c" />
+    <ClCompile Include="nyx\nyx_gui\frontend\gui_tools.c" />
+    <ClCompile Include="nyx\nyx_gui\frontend\gui_tools_partition_manager.c" />
+    <ClCompile Include="nyx\nyx_gui\gfx\gfx.c" />
+    <ClCompile Include="nyx\nyx_gui\hos\hos.c" />
+    <ClCompile Include="nyx\nyx_gui\hos\pkg1.c" />
+    <ClCompile Include="nyx\nyx_gui\hos\pkg2.c" />
+    <ClCompile Include="nyx\nyx_gui\hos\sept.c" />
+    <ClCompile Include="nyx\nyx_gui\libs\fatfs\diskio.c" />
+    <ClCompile Include="nyx\nyx_gui\libs\fatfs\ffsystem.c" />
+    <ClCompile Include="nyx\nyx_gui\nyx.c" />
+    <ClCompile Include="nyx\nyx_gui\storage\nx_emmc.c" />
+    <ClCompile Include="nyx\nyx_gui\storage\nx_emmc_bis.c" />
+    <ClCompile Include="nyx\nyx_gui\storage\nx_sd.c" />
+    <ClCompile Include="tools\bin2c\bin2c.c" />
+    <ClCompile Include="tools\lz\lz.c" />
+    <ClCompile Include="tools\lz\lz77.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bdk\display\di.inl" />
+    <None Include="bdk\mem\sdram_config.inl" />
+    <None Include="bdk\mem\sdram_config_lz.inl" />
+    <None Include="bdk\mem\sdram_config_t210b01.inl" />
+    <None Include="output\nyx.bin" />
+    <None Include="tools\emc.def" />
+    <None Include="tools\mc.def" />
+    <None Include="Versions.inc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="bdk\display\di.h" />
+    <ClInclude Include="bdk\fatfs_cfg.h" />
+    <ClInclude Include="bdk\gfx_utils.h" />
+    <ClInclude Include="bdk\ianos\elfload\elf.h" />
+    <ClInclude Include="bdk\ianos\elfload\elfarch.h" />
+    <ClInclude Include="bdk\ianos\elfload\elfload.h" />
+    <ClInclude Include="bdk\ianos\ianos.h" />
+    <ClInclude Include="bdk\input\als.h" />
+    <ClInclude Include="bdk\input\joycon.h" />
+    <ClInclude Include="bdk\input\touch.h" />
+    <ClInclude Include="bdk\libs\compr\blz.h" />
+    <ClInclude Include="bdk\libs\compr\lz.h" />
+    <ClInclude Include="bdk\libs\compr\lz4.h" />
+    <ClInclude Include="bdk\libs\fatfs\diskio.h" />
+    <ClInclude Include="bdk\libs\fatfs\ff.h" />
+    <ClInclude Include="bdk\libs\lvgl\lvgl.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_core\lv_group.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_core\lv_indev.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_core\lv_lang.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_core\lv_obj.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_core\lv_refr.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_core\lv_style.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_core\lv_vdb.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_draw\lv_draw.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_draw\lv_draw_arc.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_draw\lv_draw_img.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_draw\lv_draw_label.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_draw\lv_draw_line.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_draw\lv_draw_rbasic.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_draw\lv_draw_rect.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_draw\lv_draw_triangle.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_draw\lv_draw_vbasic.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_fonts\lv_font_builtin.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_hal\lv_hal.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_hal\lv_hal_disp.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_hal\lv_hal_indev.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_hal\lv_hal_tick.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_misc\lv_anim.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_misc\lv_area.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_misc\lv_circ.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_misc\lv_color.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_misc\lv_font.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_misc\lv_fs.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_misc\lv_gc.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_misc\lv_ll.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_misc\lv_log.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_misc\lv_math.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_misc\lv_mem.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_misc\lv_symbol_def.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_misc\lv_task.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_misc\lv_templ.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_misc\lv_txt.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_misc\lv_ufs.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_arc.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_bar.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_btn.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_btnm.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_calendar.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_canvas.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_cb.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_chart.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_cont.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_ddlist.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_gauge.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_img.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_imgbtn.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_kb.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_label.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_led.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_line.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_list.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_lmeter.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_mbox.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_objx_templ.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_page.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_preload.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_roller.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_slider.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_spinbox.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_sw.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_ta.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_table.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_tabview.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_tileview.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_objx\lv_win.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_themes\lv_theme.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_themes\lv_theme_hekate.h" />
+    <ClInclude Include="bdk\libs\lvgl\lv_version.h" />
+    <ClInclude Include="bdk\libs\lv_conf.h" />
+    <ClInclude Include="bdk\memory_map.h" />
+    <ClInclude Include="bdk\mem\emc.h" />
+    <ClInclude Include="bdk\mem\heap.h" />
+    <ClInclude Include="bdk\mem\mc.h" />
+    <ClInclude Include="bdk\mem\mc_t210.h" />
+    <ClInclude Include="bdk\mem\minerva.h" />
+    <ClInclude Include="bdk\mem\mtc_table.h" />
+    <ClInclude Include="bdk\mem\sdram.h" />
+    <ClInclude Include="bdk\mem\sdram_lp0_param_t210.h" />
+    <ClInclude Include="bdk\mem\sdram_lp0_param_t210b01.h" />
+    <ClInclude Include="bdk\mem\sdram_param_t210.h" />
+    <ClInclude Include="bdk\mem\sdram_param_t210b01.h" />
+    <ClInclude Include="bdk\mem\smmu.h" />
+    <ClInclude Include="bdk\module.h" />
+    <ClInclude Include="bdk\power\bm92t36.h" />
+    <ClInclude Include="bdk\power\bq24193.h" />
+    <ClInclude Include="bdk\power\max17050.h" />
+    <ClInclude Include="bdk\power\max77620.h" />
+    <ClInclude Include="bdk\power\max7762x.h" />
+    <ClInclude Include="bdk\power\max77812.h" />
+    <ClInclude Include="bdk\power\regulator_5v.h" />
+    <ClInclude Include="bdk\rtc\max77620-rtc.h" />
+    <ClInclude Include="bdk\sec\se.h" />
+    <ClInclude Include="bdk\sec\se_t210.h" />
+    <ClInclude Include="bdk\sec\tsec.h" />
+    <ClInclude Include="bdk\sec\tsec_t210.h" />
+    <ClInclude Include="bdk\soc\bpmp.h" />
+    <ClInclude Include="bdk\soc\ccplex.h" />
+    <ClInclude Include="bdk\soc\clock.h" />
+    <ClInclude Include="bdk\soc\fuse.h" />
+    <ClInclude Include="bdk\soc\gpio.h" />
+    <ClInclude Include="bdk\soc\hw_init.h" />
+    <ClInclude Include="bdk\soc\i2c.h" />
+    <ClInclude Include="bdk\soc\irq.h" />
+    <ClInclude Include="bdk\soc\kfuse.h" />
+    <ClInclude Include="bdk\soc\pinmux.h" />
+    <ClInclude Include="bdk\soc\pmc.h" />
+    <ClInclude Include="bdk\soc\pmc_lp0_t210.h" />
+    <ClInclude Include="bdk\soc\t210.h" />
+    <ClInclude Include="bdk\soc\uart.h" />
+    <ClInclude Include="bdk\storage\mbr_gpt.h" />
+    <ClInclude Include="bdk\storage\mmc.h" />
+    <ClInclude Include="bdk\storage\nx_sd.h" />
+    <ClInclude Include="bdk\storage\ramdisk.h" />
+    <ClInclude Include="bdk\storage\sd.h" />
+    <ClInclude Include="bdk\storage\sdmmc.h" />
+    <ClInclude Include="bdk\storage\sdmmc_driver.h" />
+    <ClInclude Include="bdk\storage\sdmmc_t210.h" />
+    <ClInclude Include="bdk\thermal\fan.h" />
+    <ClInclude Include="bdk\thermal\tmp451.h" />
+    <ClInclude Include="bdk\usb\usbd.h" />
+    <ClInclude Include="bdk\usb\usb_descriptor_types.h" />
+    <ClInclude Include="bdk\usb\usb_t210.h" />
+    <ClInclude Include="bdk\utils\aarch64_util.h" />
+    <ClInclude Include="bdk\utils\btn.h" />
+    <ClInclude Include="bdk\utils\dirlist.h" />
+    <ClInclude Include="bdk\utils\ini.h" />
+    <ClInclude Include="bdk\utils\list.h" />
+    <ClInclude Include="bdk\utils\sprintf.h" />
+    <ClInclude Include="bdk\utils\types.h" />
+    <ClInclude Include="bdk\utils\util.h" />
+    <ClInclude Include="bootloader\config.h" />
+    <ClInclude Include="bootloader\frontend\fe_emmc_tools.h" />
+    <ClInclude Include="bootloader\frontend\fe_info.h" />
+    <ClInclude Include="bootloader\frontend\fe_tools.h" />
+    <ClInclude Include="bootloader\gfx\gfx.h" />
+    <ClInclude Include="bootloader\gfx\logos.h" />
+    <ClInclude Include="bootloader\gfx\tui.h" />
+    <ClInclude Include="bootloader\hos\fss.h" />
+    <ClInclude Include="bootloader\hos\hos.h" />
+    <ClInclude Include="bootloader\hos\hos_config.h" />
+    <ClInclude Include="bootloader\hos\pkg1.h" />
+    <ClInclude Include="bootloader\hos\pkg2.h" />
+    <ClInclude Include="bootloader\hos\pkg2_ini_kippatch.h" />
+    <ClInclude Include="bootloader\hos\secmon_exo.h" />
+    <ClInclude Include="bootloader\hos\sept.h" />
+    <ClInclude Include="bootloader\libs\fatfs\ffconf.h" />
+    <ClInclude Include="bootloader\storage\emummc.h" />
+    <ClInclude Include="bootloader\storage\nx_emmc.h" />
+    <ClInclude Include="modules\hekate_libsys_lp0\pmc_lp0_t210.h" />
+    <ClInclude Include="modules\hekate_libsys_lp0\sdram_lp0_param_t210.h" />
+    <ClInclude Include="modules\hekate_libsys_lp0\sdram_lp0_param_t210b01.h" />
+    <ClInclude Include="modules\hekate_libsys_lp0\t210.h" />
+    <ClInclude Include="modules\hekate_libsys_lp0\types.h" />
+    <ClInclude Include="modules\hekate_libsys_minerva\mtc.h" />
+    <ClInclude Include="modules\hekate_libsys_minerva\mtc_mc_emc_regs.h" />
+    <ClInclude Include="modules\hekate_libsys_minerva\mtc_switch_tables.h" />
+    <ClInclude Include="modules\hekate_libsys_minerva\mtc_table.h" />
+    <ClInclude Include="modules\hekate_libsys_minerva\types.h" />
+    <ClInclude Include="modules\simple_sample\gfx\gfx.h" />
+    <ClInclude Include="nyx\nyx_gui\config.h" />
+    <ClInclude Include="nyx\nyx_gui\frontend\fe_emmc_tools.h" />
+    <ClInclude Include="nyx\nyx_gui\frontend\fe_emummc_tools.h" />
+    <ClInclude Include="nyx\nyx_gui\frontend\gui.h" />
+    <ClInclude Include="nyx\nyx_gui\frontend\gui_emmc_tools.h" />
+    <ClInclude Include="nyx\nyx_gui\frontend\gui_emummc_tools.h" />
+    <ClInclude Include="nyx\nyx_gui\frontend\gui_info.h" />
+    <ClInclude Include="nyx\nyx_gui\frontend\gui_options.h" />
+    <ClInclude Include="nyx\nyx_gui\frontend\gui_tools.h" />
+    <ClInclude Include="nyx\nyx_gui\frontend\gui_tools_partition_manager.h" />
+    <ClInclude Include="nyx\nyx_gui\gfx\gfx.h" />
+    <ClInclude Include="nyx\nyx_gui\gfx\logos-gui.h" />
+    <ClInclude Include="nyx\nyx_gui\hos\hos.h" />
+    <ClInclude Include="nyx\nyx_gui\hos\pkg1.h" />
+    <ClInclude Include="nyx\nyx_gui\hos\pkg2.h" />
+    <ClInclude Include="nyx\nyx_gui\hos\sept.h" />
+    <ClInclude Include="nyx\nyx_gui\libs\fatfs\ffconf.h" />
+    <ClInclude Include="nyx\nyx_gui\storage\nx_emmc.h" />
+    <ClInclude Include="nyx\nyx_gui\storage\nx_emmc_bis.h" />
+    <ClInclude Include="tools\lz\lz.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
