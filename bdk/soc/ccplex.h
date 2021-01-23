@@ -19,6 +19,7 @@
 
 #include <utils/types.h>
 
+void _ccplex_enable_power_t210();
 void ccplex_boot_cpu0(u32 entry);
 
 #endif

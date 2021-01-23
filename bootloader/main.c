@@ -26,6 +26,7 @@
 #include <gfx_utils.h>
 #include "gfx/logos.h"
 #include "gfx/tui.h"
+#include "gfx/gfx.h"
 #include "hos/hos.h"
 #include "hos/secmon_exo.h"
 #include "hos/sept.h"
@@ -39,6 +40,7 @@
 #include <power/max17050.h>
 #include <power/max77620.h>
 #include <power/max7762x.h>
+#include <thermal/fan.h>
 #include <rtc/max77620-rtc.h>
 #include <soc/bpmp.h>
 #include <soc/fuse.h>
@@ -47,6 +49,7 @@
 #include <soc/pmc.h>
 #include <soc/t210.h>
 #include <soc/uart.h>
+#include <soc/ccplex.h>
 #include "storage/emummc.h"
 #include "storage/nx_emmc.h"
 #include <storage/nx_sd.h>
@@ -312,6 +315,57 @@ void auto_launch_update()
 			free(buf);
 		}
 	}
+}
+
+static bool fanToggleOn;
+
+void buckFanToggle()
+{
+	gfx_clear_grey(0x1B);
+	gfx_con_setpos(0, 0);
+
+	if (!fanToggleOn)
+	{
+		set_fan_duty(236);
+		EPRINTF("Started CPU fan at full duty.");
+	}
+	else
+	{
+		set_fan_duty(0);
+		EPRINTF("Returned fan to defaults.");
+	}
+
+	fanToggleOn = !fanToggleOn;
+	EPRINTF("Press power to return.");
+	btn_wait();
+}
+
+static bool buckCPUToggleOn;
+
+void buckCPUBuckToggle()
+{
+	gfx_clear_grey(0x1B);
+	gfx_con_setpos(0, 0);
+
+	if (!buckCPUToggleOn)
+	{
+		_ccplex_enable_power_t210();
+		EPRINTF("Enabled CPU buck!");
+	}
+	else
+	{
+		// Fix CPU/GPU after a L4T warmboot.
+		i2c_send_byte(I2C_5, MAX77620_I2C_ADDR, MAX77620_REG_GPIO5, 2);
+		i2c_send_byte(I2C_5, MAX77620_I2C_ADDR, MAX77620_REG_GPIO6, 2);
+
+		i2c_send_byte(I2C_5, MAX77621_CPU_I2C_ADDR, MAX77621_VOUT_REG, MAX77621_VOUT_0_95V); // Disable power.
+
+		EPRINTF("Disabled CPU buck!");
+	}
+
+	buckCPUToggleOn = !buckCPUToggleOn;
+	EPRINTF("Press button to return.");
+	btn_wait();
 }
 
 void launch_tools()
@@ -1194,16 +1248,16 @@ static void _show_errors()
 		gfx_con_setpos(0, 0);
 		display_backlight_brightness(150, 1000);
 
-		if (h_cfg.errors & ERR_SD_BOOT_EN)
-			WPRINTF("Failed to mount SD!\n");
+		//if (h_cfg.errors & ERR_SD_BOOT_EN)
+		//	WPRINTF("Failed to mount SD!\n");
 
-		if (h_cfg.errors & ERR_LIBSYS_LP0)
-			WPRINTF("Missing LP0 (sleep mode) lib!\n");
-		if (h_cfg.errors & ERR_LIBSYS_MTC)
-			WPRINTF("Missing or old Minerva lib!\n");
+		//if (h_cfg.errors & ERR_LIBSYS_LP0)
+		//	WPRINTF("Missing LP0 (sleep mode) lib!\n");
+		//if (h_cfg.errors & ERR_LIBSYS_MTC)
+		//	WPRINTF("Missing or old Minerva lib!\n");
 
-		if (h_cfg.errors & (ERR_LIBSYS_LP0 | ERR_LIBSYS_MTC))
-			WPRINTF("\nUpdate bootloader folder!\n\n");
+		//if (h_cfg.errors & (ERR_LIBSYS_LP0 | ERR_LIBSYS_MTC))
+		//	WPRINTF("\nUpdate bootloader folder!\n\n");
 
 		if (h_cfg.errors & ERR_EXCEPTION)
 		{
@@ -1227,6 +1281,9 @@ static void _show_errors()
 
 			// Clear the exception.
 			*excp_enabled = 0;
+
+			WPRINTF("Press any key...");
+			btn_wait();
 		}
 
 		if (0 && h_cfg.errors & ERR_L4T_KERNEL)
@@ -1234,12 +1291,13 @@ static void _show_errors()
 			WPRINTF("Panic occurred while running L4T.\n");
 			if (!sd_save_to_file((void *)PSTORE_ADDR, PSTORE_SZ, "L4T_panic.bin"))
 				WPRINTF("PSTORE saved to L4T_panic.bin\n");
+
+			WPRINTF("Press any key...");
+			btn_wait();
 		}
-
-		WPRINTF("Press any key...");
-
-		msleep(1000);
-		btn_wait();
+			
+		//msleep(1000);
+		//btn_wait();
 	}
 }
 
@@ -1506,8 +1564,8 @@ power_state_t STATE_REBOOT_RCM          = REBOOT_RCM;
 power_state_t STATE_REBOOT_BYPASS_FUSES = REBOOT_BYPASS_FUSES;
 
 ment_t ment_top[] = {
-	MDEF_HANDLER("Launch", launch_firmware),
-	//MDEF_MENU("Options", &menu_options),
+	MDEF_HANDLER("Toggle Fan", buckFanToggle),
+	MDEF_HANDLER("Toggle CPU Buck", buckCPUBuckToggle),
 	MDEF_CAPTION("---------------", 0xFF444444),
 	MDEF_MENU("Tools",        &menu_tools),
 	MDEF_MENU("Console info", &menu_cinfo),
@@ -1521,7 +1579,7 @@ ment_t ment_top[] = {
 	MDEF_END()
 };
 
-menu_t menu_top = { ment_top, "hekate - CTCaer mod v5.5.3", 0, 0 };
+menu_t menu_top = { ment_top, "BuckToolsNX 1.0.0", 0, 0 };
 
 extern void pivot_stack(u32 stack_top);
 

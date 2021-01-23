@@ -35,7 +35,8 @@ OBJS += $(addprefix $(BUILDDIR)/$(TARGET)/, \
 	pinmux.o pmc.o se.o smmu.o tsec.o uart.o \
 	fuse.o kfuse.o minerva.o \
 	sdmmc.o sdmmc_driver.o emummc.o nx_emmc.o nx_sd.o \
-	bq24193.o max17050.o max7762x.o max77620-rtc.o \
+	bq24193.o max17050.o max7762x.o max77620-rtc.o regulator_5v.o\
+	fan.o \
 	hw_init.o \
 )
 
@@ -74,7 +75,8 @@ CUSTOMDEFINES += -DGFX_INC=$(GFX_INC) -DFFCFG_INC=$(FFCFG_INC)
 #CUSTOMDEFINES += -DDEBUG_UART_BAUDRATE=115200 -DDEBUG_UART_INVERT=0 -DDEBUG_UART_PORT=0
 
 ARCH := -march=armv4t -mtune=arm7tdmi -mthumb -mthumb-interwork
-CFLAGS = $(ARCH) -O2 -g -nostdlib -ffunction-sections -fdata-sections -fomit-frame-pointer -fno-inline -std=gnu11 -Wall $(CUSTOMDEFINES)
+CFLAGS = $(ARCH) -O2 -nostdlib -ffunction-sections -fdata-sections -fomit-frame-pointer -fno-inline -std=gnu11 -Wall $(CUSTOMDEFINES)
+#CFLAGS = $(ARCH) -O2 -g -nostdlib -ffunction-sections -fdata-sections -fomit-frame-pointer -fno-inline -std=gnu11 -Wall $(CUSTOMDEFINES)
 LDFLAGS = $(ARCH) -nostartfiles -lgcc -Wl,--nmagic,--gc-sections -Xlinker --defsym=IPL_LOAD_ADDR=$(IPL_LOAD_ADDR)
 
 MODULEDIRS := $(wildcard modules/*)
@@ -86,7 +88,8 @@ TOOLS := $(TOOLSLZ) $(TOOLSB2C)
 
 ################################################################################
 
-.PHONY: all clean $(MODULEDIRS) $(NYXDIR) $(LDRDIR) $(TOOLS)
+#.PHONY: all clean $(MODULEDIRS) $(NYXDIR) $(LDRDIR) $(TOOLS)
+.PHONY: all clean
 
 all: $(TARGET).bin $(LDRDIR)
 	@printf ICTC49 >> $(OUTPUTDIR)/$(TARGET).bin
@@ -104,7 +107,7 @@ all: $(TARGET).bin $(LDRDIR)
 	@echo "--------------------------------------"
 
 clean: $(TOOLS)
-	@rm -rf $(OBJS)
+	#@rm -rf $(OBJS)
 	@rm -rf $(BUILDDIR)
 	@rm -rf $(OUTPUTDIR)
 
